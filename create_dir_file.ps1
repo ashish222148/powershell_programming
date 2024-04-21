@@ -20,3 +20,11 @@ New-Item -Path "F:\powershell_scripting\out_folder\GoCloudEsay" -Name "MyFile.tx
 #writing something in to newly created file
 New-Item -Path "F:\powershell_scripting\out_folder\GoCloudEsay" -Name "ashishfile.txt" -Value "test content"
 
+#creating new file,override existing file or in case path is not vaialbale it will create the folder as well-force
+New-Item -path "F:\powershell_scripting\out_folder\GoCloudEsay_new" -Name ash.txt -Force
+
+#check what will happen if we run this command
+New-Item -path "F:\powershell_scripting\out_folder\GoCloudEsay_new" -Name ash.txt -Force -WhatIf
+
+#ask yes or no befor proceeding furthur
+New-Item -path "F:\powershell_scripting\out_folder\GoCloudEsay_new" -Name ash.txt -Force -Confirm
